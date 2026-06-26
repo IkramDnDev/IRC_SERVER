@@ -39,6 +39,7 @@
 #define ERR_NOTONCHANNEL(client, channel)                       ":" + IRC_SERVER_PREFIX + " 442 " + client + " " + channel + " :You're not on that channel" + IRC_LINE_END
 #define ERR_CHANOPRIVSNEEDED(client, channel)                   ":" + IRC_SERVER_PREFIX + " 482 " + client + " " + channel + " :You're not channel operator" + IRC_LINE_END
 #define ERR_USERONCHANNEL(client, channel)                      ":" + IRC_SERVER_PREFIX + " 443 " + client + " " + channel + " :is already on channel" + IRC_LINE_END
+#define ERR_USERNOTINCHANNEL(client, nick, channel)             ":" + IRC_SERVER_PREFIX + " 441 " + client + " " + nick + " " + channel + " :They aren't on that channel " + IRC_LINE_END
 #define RPL_INVITING(client, nick, channel)                     ":" + IRC_SERVER_PREFIX + " 341 " + client + " " + nick + " " + channel + IRC_LINE_END
 //
 

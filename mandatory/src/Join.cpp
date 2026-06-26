@@ -12,7 +12,7 @@ std::string make_prefix(Client& client)
 
 static bool is_valid_channel_name(const std::string& name)
 {
-    if (name.empty() || name[0] != '#')
+    if (name.empty() || (name[0] != '#' && (name[0] != '&')))
         return false;
 
     for (size_t i = 1; i < name.size(); ++i)

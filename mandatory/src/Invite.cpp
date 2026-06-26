@@ -35,8 +35,8 @@ void handle_invite_request(Server &server, Client &client, Message &msg)
         client.envoyerMessage(ERR_NOSUCHCHANNEL(client.getNickname(), channel_name));
         return;
     }
-
     Channel& ch = it->second;
+    
     if (!ch.isMember(&client))
     {
         client.envoyerMessage(ERR_NOTONCHANNEL(client.getNickname(), channel_name));

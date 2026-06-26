@@ -31,19 +31,20 @@ class           Message;
 #define         GRAY    "\033[0;90m"
 
 //1
-bool            parseArguments(int argc, char **argv);
-void            parse_message(const std::string &msg_line, Client &client, Server &server);
+bool                        parseArguments(int argc, char **argv);
+void                        parse_message(const std::string &msg_line, Client &client, Server &server);
 
 //2
-int             handle_authentication(Client &client, Message msg, Server& server);
-void            handle_join_request(Server &server, Client &client, Message &msg);
-void            handle_invite_request(Server &server, Client &client, Message &msg);
-void            handle_topic_request(Server &server, Client &client, Message &msg);
-void            handle_privmsg_request(Server &server, Client &client, Message &msg);
-void            handle_mode_request(Server &server, Client &client, Message &msg);
-void            handle_kick_request(Server &server, Client &client, Message &msg);
-void            handle_whois_request(Server &server, Client &client, Message &msg);
+int                         handle_authentication(Client &client, Message msg, Server& server);
+void                        handle_join_request(Server &server, Client &client, Message &msg);
+void                        handle_invite_request(Server &server, Client &client, Message &msg);
+void                        handle_topic_request(Server &server, Client &client, Message &msg);
+void                        handle_privmsg_request(Server &server, Client &client, Message &msg);
+void                        handle_mode_request(Server &server, Client &client, Message &msg);
+void                        handle_kick_request(Server &server, Client &client, Message &msg);
+void                        handle_whois_request(Server &server, Client &client, Message &msg);
 
-std::string     make_prefix(Client& client);
+std::string                 make_prefix(Client& client);
+std::vector<std::string>    split(const std::string& s);
 
 #endif
